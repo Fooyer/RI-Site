@@ -1,0 +1,13 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # Redirecionar tudo para index.html para permitir SPA (Single Page Application)
+  RewriteBase /
+
+  # Ignorar diretórios e arquivos existentes
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+
+  # Redirecionar todas as outras requisições para index.html
+  RewriteRule ^ index.html [L]
+</IfModule>
