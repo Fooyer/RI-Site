@@ -8,7 +8,7 @@ import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
 import Seminario from "./pages/Seminario";
 import Podcast from "./pages/Podcast";
-import Storytelling from "./pages/Storytelling";
+import StoryTelling from "./pages/StoryTelling";
 import VideoCases from "./pages/VideoCases";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
@@ -19,7 +19,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
 
       <Route path="/trabalhos/seminario" element={<Seminario />} />
       <Route path="/trabalhos/podcast" element={<Podcast />} />
-      <Route path="/trabalhos/storytelling" element={<Storytelling />} />
+      <Route path="/trabalhos/storytelling" element={<StoryTelling />} />
       <Route path="/trabalhos/video" element={<VideoCases />} />
     </Routes>
     <Footer />

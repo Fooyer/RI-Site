@@ -41,7 +41,7 @@ export default function NavBar() {
               Storytelling
             </Link>
             <Link to="/trabalhos/video" className={styles.navLink}>
-              Vídeo - Cases
+              Vídeo
             </Link>
           </div>
 

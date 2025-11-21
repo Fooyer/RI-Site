@@ -38,19 +38,8 @@ const FloatingElement = ({ children, duration = 3 }) => (
 );
 
 const App = () => {
-  const [activeSection, setActiveSection] = useState("home");
-  const [scrolled, setScrolled] = useState(false);
-
   // === REF para scroll ===
   const trabalhosRef = useRef(null);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   const trabalhos = [
     {
@@ -67,7 +56,11 @@ const App = () => {
         "Inteligência emocional",
         "O papel do RH",
       ],
-      autores: ["Fulano", "Ciclano"], // <<< AQUI
+      autores: [
+        "André Cardozo Rodrigues",
+        "Kalebe Daniel Elisio Scheidt",
+        "Murilo Eduardo da Rosa",
+      ],
     },
     {
       id: "podcast",
@@ -82,19 +75,19 @@ const App = () => {
       id: "storytelling",
       icon: BookOpen,
       titulo: "Storytelling",
-      cor: "pink",
+      cor: "emerald",
       descricao: "Narrativas sobre conflitos e resoluções positivas",
       destaque: "Pode ser dramatização, animação ou encenação",
-      autores: ["Aluno X"],
+      autores: ["Gustavo", "Lauana", "Nicoly", "Erik"],
     },
     {
       id: "video",
       icon: Video,
       titulo: "Vídeo - Cases",
-      cor: "emerald",
+      cor: "pink",
       descricao: "Cases de sucesso e fundamentação científica",
       destaque: "Conectando teoria e prática empresarial",
-      autores: ["Aluno A", "Aluno B", "Aluno C"],
+      autores: ["Thiago", "Pedro"],
     },
   ];
 
@@ -252,7 +245,7 @@ const App = () => {
           <p className="creditos-subtitle">
             Trabalho desenvolvido pelos alunos da UDESC – CEPLAN
             <br />
-            Turma de Relações Interpessoais – São Bento do Sul
+            Turma de Relações Interpessoais 2025/02 – São Bento do Sul
           </p>
 
           <div className="creditos-equipe">

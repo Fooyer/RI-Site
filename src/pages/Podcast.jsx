@@ -1,15 +1,9 @@
 // Podcast.jsx
 import { useEffect, useState, useRef } from "react";
-import {
-  Mic2,
-  Play,
-  Pause,
-  Volume2,
-  Clock,
-  Users,
-  Headphones,
-} from "lucide-react";
+import { Mic2, Play, Pause, Volume2, Headphones } from "lucide-react";
 import styles from "./Podcast.module.css";
+
+import podcastAudio from "../assets/podcast.mp3";
 
 export default function Podcast() {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -80,7 +74,7 @@ export default function Podcast() {
             </h1>
             <p className={styles.heroSubtitle}>
               Uma jornada sonora explorando os desafios e oportunidades das
-              relações humanas no ambiente profissional e pessoal.
+              relações interpessoais no ambiente profissional e pessoal.
             </p>
           </div>
 
@@ -131,7 +125,7 @@ export default function Podcast() {
               <Volume2 className={styles.volumeIcon} />
             </div>
 
-            <audio ref={audioRef} src="/podcast.mp3" preload="metadata" />
+            <audio ref={audioRef} src={podcastAudio} preload="metadata" />
           </div>
         </div>
       </section>
